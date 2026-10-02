@@ -1,0 +1,133 @@
+{
+ "row_counts": [
+  {
+   "table": "stg_encounters",
+   "duckdb_rows": 101766,
+   "databricks_rows": 101766,
+   "match": true
+  },
+  {
+   "table": "stg_ids_mapping",
+   "duckdb_rows": 67,
+   "databricks_rows": 67,
+   "match": true
+  },
+  {
+   "table": "cln_encounters",
+   "duckdb_rows": 101763,
+   "databricks_rows": 101763,
+   "match": true
+  },
+  {
+   "table": "cln_encounter_medications",
+   "duckdb_rows": 120050,
+   "databricks_rows": 120050,
+   "match": true
+  },
+  {
+   "table": "fact_encounter",
+   "duckdb_rows": 101763,
+   "databricks_rows": 101763,
+   "match": true
+  },
+  {
+   "table": "fact_encounter_medication",
+   "duckdb_rows": 120050,
+   "databricks_rows": 120050,
+   "match": true
+  },
+  {
+   "table": "dim_patient",
+   "duckdb_rows": 71515,
+   "databricks_rows": 71515,
+   "match": true
+  },
+  {
+   "table": "dim_age_group",
+   "duckdb_rows": 10,
+   "databricks_rows": 10,
+   "match": true
+  },
+  {
+   "table": "dim_diagnosis_group",
+   "duckdb_rows": 10,
+   "databricks_rows": 10,
+   "match": true
+  },
+  {
+   "table": "dim_admission_type",
+   "duckdb_rows": 8,
+   "databricks_rows": 8,
+   "match": true
+  },
+  {
+   "table": "dim_discharge_disposition",
+   "duckdb_rows": 30,
+   "databricks_rows": 30,
+   "match": true
+  },
+  {
+   "table": "dim_admission_source",
+   "duckdb_rows": 25,
+   "databricks_rows": 25,
+   "match": true
+  },
+  {
+   "table": "dim_medication",
+   "duckdb_rows": 23,
+   "databricks_rows": 23,
+   "match": true
+  }
+ ],
+ "table_comparisons": {
+  "a_kpi_headline": {
+   "rows_databricks": 1,
+   "rows_duckdb": 1,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "a_readmit_by_age": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "a_readmit_by_diagnosis": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "a_readmit_by_los_band": {
+   "rows_databricks": 4,
+   "rows_duckdb": 4,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "a_readmit_by_medication": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "a_readmit_by_prior_inpatient": {
+   "rows_databricks": 4,
+   "rows_duckdb": 4,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "dq_issues": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  },
+  "dq_assertions": {
+   "rows_databricks": 12,
+   "rows_duckdb": 12,
+   "cell_diffs": [],
+   "n_cell_diffs": 0
+  }
+ },
+ "all_row_counts_match": true
+}

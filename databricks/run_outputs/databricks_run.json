@@ -1,0 +1,333 @@
+{
+ "warehouse": "Serverless Starter Warehouse",
+ "schema": "workspace.da_learn_08",
+ "upload": [
+  {
+   "file": "diabetic_data.csv",
+   "local_bytes": 19159383,
+   "volume_bytes": 19159383,
+   "secs": 7.5
+  },
+  {
+   "file": "IDS_mapping.csv",
+   "local_bytes": 2547,
+   "volume_bytes": 2547,
+   "secs": 6.0
+  }
+ ],
+ "statements": [
+  {
+   "stmt": "CREATE SCHEMA IF NOT EXISTS workspace.da_learn_08",
+   "secs": 2.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "USE CATALOG workspace",
+   "secs": 2.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "USE SCHEMA da_learn_08",
+   "secs": 2.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE stg_encounters AS",
+   "secs": 9.0,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE stg_ids_mapping AS",
+   "secs": 4.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE cln_encounters AS",
+   "secs": 8.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE cln_encounter_medications AS",
+   "secs": 6.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_admission_type AS",
+   "secs": 4.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_discharge_disposition AS",
+   "secs": 4.4,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_admission_source AS",
+   "secs": 4.4,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_medication AS",
+   "secs": 4.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_age_group AS",
+   "secs": 4.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_diagnosis_group AS",
+   "secs": 4.7,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dim_patient AS",
+   "secs": 5.0,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE fact_encounter AS",
+   "secs": 6.4,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE fact_encounter_medication AS",
+   "secs": 4.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_kpi_headline AS",
+   "secs": 4.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_age AS",
+   "secs": 4.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_diagnosis AS",
+   "secs": 4.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_top_diag_codes AS",
+   "secs": 4.5,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_los AS",
+   "secs": 5.0,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_los_band AS",
+   "secs": 4.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_medication AS",
+   "secs": 5.2,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_insulin AS",
+   "secs": 4.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_med_change AS",
+   "secs": 4.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_n_meds AS",
+   "secs": 4.8,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_prior_inpatient AS",
+   "secs": 5.0,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_a1c AS",
+   "secs": 4.9,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_discharge AS",
+   "secs": 5.2,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_readmit_by_admission_type AS",
+   "secs": 5.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE a_patient_utilisation AS",
+   "secs": 5.0,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dq_row_counts AS",
+   "secs": 8.2,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dq_null_rates AS",
+   "secs": 5.6,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dq_issues AS",
+   "secs": 7.3,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "CREATE OR REPLACE TABLE dq_assertions AS",
+   "secs": 22.2,
+   "rows_returned": 0
+  },
+  {
+   "stmt": "SELECT * FROM dq_row_counts",
+   "secs": 3.8,
+   "rows_returned": 11
+  },
+  {
+   "stmt": "SELECT * FROM dq_assertions ORDER BY status, check_name",
+   "secs": 3.2,
+   "rows_returned": 12
+  },
+  {
+   "stmt": "SELECT * FROM a_kpi_headline",
+   "secs": 3.0,
+   "rows_returned": 1
+  },
+  {
+   "stmt": "SELECT encounters_total, patients_total, readmit_30d_pct / 100 AS readmit_30d_rate, readmi",
+   "secs": 3.3,
+   "rows_returned": 1
+  },
+  {
+   "stmt": "SELECT age_group, age_mid, encounters, readmit_30d_pct FROM a_readmit_by_age ORDER BY age_",
+   "secs": 2.8,
+   "rows_returned": 10
+  },
+  {
+   "stmt": "SELECT primary_diagnosis_group, encounters, readmit_30d_pct FROM a_readmit_by_diagnosis OR",
+   "secs": 3.1,
+   "rows_returned": 10
+  },
+  {
+   "stmt": "SELECT los_days, encounters, readmit_30d_pct FROM a_readmit_by_los ORDER BY los_days",
+   "secs": 3.0,
+   "rows_returned": 14
+  },
+  {
+   "stmt": "SELECT medication, encounters_prescribed, readmit_30d_pct FROM a_readmit_by_medication ORD",
+   "secs": 3.3,
+   "rows_returned": 10
+  },
+  {
+   "stmt": "SELECT prior_inpatient_band, encounters, readmit_30d_pct FROM a_readmit_by_prior_inpatient",
+   "secs": 4.0,
+   "rows_returned": 4
+  },
+  {
+   "stmt": "SELECT discharge_group, encounters, readmit_30d_pct FROM a_readmit_by_discharge ORDER BY r",
+   "secs": 3.2,
+   "rows_returned": 8
+  }
+ ],
+ "run_secs": 231.2,
+ "run_finished_utc": "2026-10-02T16:38:34Z",
+ "all_row_counts_match": true,
+ "row_counts": {
+  "stg_encounters": 101766,
+  "stg_ids_mapping": 67,
+  "cln_encounters": 101763,
+  "cln_encounter_medications": 120050,
+  "fact_encounter": 101763,
+  "fact_encounter_medication": 120050,
+  "dim_patient": 71515,
+  "dim_age_group": 10,
+  "dim_diagnosis_group": 10,
+  "dim_admission_type": 8,
+  "dim_discharge_disposition": 30,
+  "dim_admission_source": 25,
+  "dim_medication": 23
+ },
+ "assertions": [
+  {
+   "check_name": "fact_encounter rows = cln_encounters rows",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter.admission_source_id -> dim_admission_source",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter.admission_type_id -> dim_admission_type",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter.discharge_disposition_id -> dim_discharge_disposition",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter.encounter_id unique",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter.patient_nbr -> dim_patient",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "fact_encounter_medication.medication_key -> dim_medication",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "non-negative visit / medication counts",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "readmit_30d_flag <= readmit_any_flag",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "readmitted in {<30, >30, NO}",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "seeded lookup rows exist verbatim in IDS_mapping.csv",
+   "failed_rows": "0",
+   "status": "PASS"
+  },
+  {
+   "check_name": "time_in_hospital between 1 and 14",
+   "failed_rows": "0",
+   "status": "PASS"
+  }
+ ],
+ "dashboard": {
+  "dashboard_name": "da-learn-08 Hospital readmissions",
+  "dashboard_path": "/Shared/da-learn-08-healthcare-hospital-readmissions/da-learn-08 Hospital readmissions.lvdash.json",
+  "published": true,
+  "published_at_utc": "2026-10-02T16:39:22.421Z",
+  "notebook_path": "/Workspace/Shared/da-learn-08-healthcare-hospital-readmissions/readmissions_pipeline_notebook",
+  "folder": "/Workspace/Shared/da-learn-08-healthcare-hospital-readmissions"
+ }
+}

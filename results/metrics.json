@@ -1,0 +1,200 @@
+{
+ "project": "da-learn-08-healthcare-hospital-readmissions",
+ "dataset": "Diabetes 130-US Hospitals for Years 1999-2008 (UCI ML Repository id 296; Kaggle: brandao/diabetes; CC BY 4.0)",
+ "source_mode": "full",
+ "kpis": {
+  "encounters_total": 101763,
+  "patients_total": 71515,
+  "eligible_encounters": 99340,
+  "readmits_30d": 11314,
+  "readmit_30d_pct": 11.39,
+  "readmit_any_pct": 47.13,
+  "readmit_30d_pct_all_encounters": 11.16,
+  "readmit_30d_pct_first_encounter": 8.97,
+  "avg_los_days": 4.4,
+  "avg_num_medications": 16.02,
+  "avg_num_lab_procedures": 43.1,
+  "med_change_pct": 46.19,
+  "on_diabetes_med_pct": 77.0,
+  "on_insulin_pct": 53.44,
+  "a1c_tested_pct": 16.72,
+  "prior_inpatient_pct": 33.54
+ },
+ "analysis_tables": [
+  "tables/a_readmit_by_age.csv",
+  "tables/a_readmit_by_diagnosis.csv",
+  "tables/a_readmit_by_los_band.csv",
+  "tables/a_readmit_by_medication.csv",
+  "tables/a_readmit_by_prior_inpatient.csv",
+  "tables/a_readmit_by_a1c.csv",
+  "tables/a_readmit_by_discharge.csv",
+  "tables/a_readmit_by_med_change.csv",
+  "tables/a_readmit_by_insulin.csv",
+  "tables/a_readmit_by_n_meds.csv",
+  "tables/a_readmit_by_admission_type.csv",
+  "tables/a_patient_utilisation.csv"
+ ],
+ "data_quality": {
+  "row_counts": [
+   {
+    "entity": "encounters",
+    "raw_rows": 101766,
+    "distinct_keys": 101766,
+    "clean_rows": 101763,
+    "grain": "encounter_id"
+   },
+   {
+    "entity": "encounter_medications",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 120050,
+    "grain": "encounter x prescribed drug"
+   },
+   {
+    "entity": "fact_encounter",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 101763,
+    "grain": "encounter"
+   },
+   {
+    "entity": "fact_encounter_medication",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 120050,
+    "grain": "encounter x drug"
+   },
+   {
+    "entity": "dim_patient",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 71515,
+    "grain": "patient_nbr"
+   },
+   {
+    "entity": "dim_age_group",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 10,
+    "grain": "age decade"
+   },
+   {
+    "entity": "dim_diagnosis_group",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 10,
+    "grain": "ICD-9 group"
+   },
+   {
+    "entity": "dim_admission_type",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 8,
+    "grain": "admission_type_id"
+   },
+   {
+    "entity": "dim_discharge_disposition",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 30,
+    "grain": "discharge_disposition_id"
+   },
+   {
+    "entity": "dim_admission_source",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 25,
+    "grain": "admission_source_id"
+   },
+   {
+    "entity": "dim_medication",
+    "raw_rows": null,
+    "distinct_keys": null,
+    "clean_rows": 23,
+    "grain": "drug"
+   }
+  ],
+  "null_rates": [
+   {
+    "entity": "encounters",
+    "column_name": "weight",
+    "raw_missing_pct": 96.86,
+    "clean_null_pct": 96.86,
+    "treatment": "kept as NULL (97% missing - not used for analysis)"
+   },
+   {
+    "entity": "encounters",
+    "column_name": "payer_code",
+    "raw_missing_pct": 39.56,
+    "clean_null_pct": 39.56,
+    "treatment": "kept as NULL"
+   },
+   {
+    "entity": "encounters",
+    "column_name": "medical_specialty",
+    "raw_missing_pct": 49.08,
+    "clean_null_pct": 49.08,
+    "treatment": "kept as NULL"
+   },
+   {
+    "entity": "encounters",
+    "column_name": "race",
+    "raw_missing_pct": 2.23,
+    "clean_null_pct": 2.23,
+    "treatment": "kept as NULL"
+   },
+   {
+    "entity": "encounters",
+    "column_name": "diag_1",
+    "raw_missing_pct": 0.02,
+    "clean_null_pct": 0.02,
+    "treatment": "NULL -> diagnosis group Missing"
+   },
+   {
+    "entity": "encounters",
+    "column_name": "A1Cresult",
+    "raw_missing_pct": 83.28,
+    "clean_null_pct": 83.28,
+    "treatment": "'None' means test not done -> category Not measured"
+   }
+  ],
+  "issues": {
+   "encounters: duplicate encounter_id (extras dropped)": 0,
+   "encounters: gender Unknown/Invalid (dropped)": 3,
+   "encounters: rows dropped in cleaning": 3,
+   "encounters: expired / hospice discharge (excluded from readmission rates)": 2423,
+   "encounters: repeat encounters of the same patient": 30248,
+   "encounters: num_medications outlier (> Q3 + 3*IQR, kept)": 430,
+   "encounters: num_lab_procedures outlier (> Q3 + 3*IQR, kept)": 0,
+   "encounters: diag_1 is a V/E supplementary code": 1645,
+   "encounters: discharge id not in IDS_mapping": 0,
+   "encounters: patients with > 1 encounter": 16773
+  },
+  "assertions": {
+   "fact_encounter.encounter_id unique": "PASS",
+   "fact_encounter rows = cln_encounters rows": "PASS",
+   "fact_encounter.patient_nbr -> dim_patient": "PASS",
+   "fact_encounter.admission_type_id -> dim_admission_type": "PASS",
+   "fact_encounter.discharge_disposition_id -> dim_discharge_disposition": "PASS",
+   "fact_encounter.admission_source_id -> dim_admission_source": "PASS",
+   "fact_encounter_medication.medication_key -> dim_medication": "PASS",
+   "seeded lookup rows exist verbatim in IDS_mapping.csv": "PASS",
+   "readmitted in {<30, >30, NO}": "PASS",
+   "time_in_hospital between 1 and 14": "PASS",
+   "readmit_30d_flag <= readmit_any_flag": "PASS",
+   "non-negative visit / medication counts": "PASS"
+  }
+ },
+ "engine": {
+  "duckdb": "1.5.6",
+  "python": "3.13.5"
+ },
+ "sql_timings_s": {
+  "00_duckdb_compat.sql": 0.001,
+  "01_staging.sql": 0.45,
+  "02_cleaning.sql": 0.762,
+  "03_model.sql": 0.251,
+  "04_analysis.sql": 0.1,
+  "05_quality_checks.sql": 0.043
+ }
+}
