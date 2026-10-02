@@ -116,7 +116,7 @@ def main():
         "assertions": {r["check_name"]: r["status"] for r in rows(con, "SELECT * FROM dq_assertions")},
     }
     metrics = {"project": P.NAME, "dataset": P.DATASET, "source_mode": a.source, "kpis": kpi,
-               "analysis": {t: rows(con, f"SELECT * FROM {t} ORDER BY ALL") for t in P.METRIC_TABLES} if a.source == "full" else "see results/tables (full run only)",
+               "analysis_tables": [f"tables/{t}.csv" for t in P.METRIC_TABLES] if a.source == "full" else "full run only",
                "data_quality": dq, "engine": {"duckdb": duckdb.__version__, "python": platform.python_version()},
                "sql_timings_s": timings}
     res.mkdir(parents=True, exist_ok=True)

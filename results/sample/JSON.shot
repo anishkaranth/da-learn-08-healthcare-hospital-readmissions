@@ -1,0 +1,80 @@
+{
+  "snapshot": "headline KPIs + run config",
+  "project": "da-learn-08-healthcare-hospital-readmissions",
+  "source_mode": "sample",
+  "engine": "duckdb 1.5.6",
+  "config": {
+    "sql_dialect": "Spark/Databricks SQL (+ DuckDB shim in sql/00)",
+    "readmission_definition": "readmitted '<30' -> readmit_30d_flag = 1 (any = '<30' or '>30')",
+    "rate_denominator": "readmission-eligible encounters (discharge to expired / hospice excluded)",
+    "outlier_rule": "num_medications / num_lab_procedures > Q3 + 3*IQR (flagged, kept)",
+    "sample_rule": "CAST(encounter_id AS BIGINT) % 691 = 7 (data/raw, 153 encounters)"
+  },
+  "headline": {
+    "encounters_total": 153,
+    "patients_total": 152,
+    "eligible_encounters": 149,
+    "readmits_30d": 16,
+    "readmit_30d_pct": 10.74,
+    "readmit_any_pct": 45.64,
+    "readmit_30d_pct_first_encounter": 10.14,
+    "avg_los_days": 4.78,
+    "avg_num_medications": 17.0,
+    "med_change_pct": 43.79,
+    "on_insulin_pct": 51.63,
+    "a1c_tested_pct": 13.07,
+    "prior_inpatient_pct": 28.1
+  },
+  "readmit_30d_pct_by_age": {
+    "20-30": 0.0,
+    "30-40": 0.0,
+    "40-50": 8.33,
+    "50-60": 16.67,
+    "60-70": 8.11,
+    "70-80": 15.38,
+    "80-90": 7.41,
+    "90-100": 0.0
+  },
+  "readmit_30d_pct_by_los_band": {
+    "01: 1-2 days": 9.52,
+    "02: 3-4 days": 9.09,
+    "03: 5-7 days": 14.71,
+    "04: 8-14 days": 10.34
+  },
+  "readmit_30d_pct_by_prior_inpatient": {
+    "0": 7.41,
+    "1": 5.0,
+    "2": 27.27,
+    "3+": 40.0
+  },
+  "top_diagnosis_groups": [
+    {
+      "primary_diagnosis_group": "Circulatory",
+      "encounters": 52,
+      "readmit_30d_pct": 5.77
+    },
+    {
+      "primary_diagnosis_group": "Respiratory",
+      "encounters": 21,
+      "readmit_30d_pct": 14.29
+    },
+    {
+      "primary_diagnosis_group": "Digestive",
+      "encounters": 17,
+      "readmit_30d_pct": 11.76
+    },
+    {
+      "primary_diagnosis_group": "Injury",
+      "encounters": 13,
+      "readmit_30d_pct": 15.38
+    },
+    {
+      "primary_diagnosis_group": "Other",
+      "encounters": 12,
+      "readmit_30d_pct": 8.33
+    }
+  ],
+  "medications_by_readmit_30d_pct": [],
+  "assertions_passed": 12,
+  "assertions_total": 12
+}
