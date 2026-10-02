@@ -1,0 +1,35 @@
+// measures.dax - DAX measures for the readmissions star schema (create in a "_Measures" table)
+// Same logic as sql/04_analysis.sql: rates use readmission-eligible encounters (expired / hospice discharges excluded).
+
+Encounters = COUNTROWS ( fact_encounter )
+Patients = DISTINCTCOUNT ( fact_encounter[patient_nbr] )
+Eligible Encounters = CALCULATE ( [Encounters], fact_encounter[is_readmit_eligible] = 1 )
+Readmits 30d = CALCULATE ( [Encounters], fact_encounter[is_readmit_eligible] = 1, fact_encounter[readmit_30d_flag] = 1 )
+Readmits Any = CALCULATE ( [Encounters], fact_encounter[is_readmit_eligible] = 1, fact_encounter[readmit_any_flag] = 1 )
+Readmit 30d % = DIVIDE ( [Readmits 30d], [Eligible Encounters] )
+Readmit Any % = DIVIDE ( [Readmits Any], [Eligible Encounters] )
+Readmit 30d % First Encounter =
+    DIVIDE (
+        CALCULATE ( [Readmits 30d], fact_encounter[is_first_encounter] = 1 ),
+        CALCULATE ( [Eligible Encounters], fact_encounter[is_first_encounter] = 1 )
+    )
+
+Avg LOS (days) = AVERAGE ( fact_encounter[time_in_hospital] )
+Avg Medications = AVERAGE ( fact_encounter[num_medications] )
+Avg Lab Procedures = AVERAGE ( fact_encounter[num_lab_procedures] )
+Med Change % = DIVIDE ( CALCULATE ( [Encounters], fact_encounter[med_change_flag] = 1 ), [Encounters] )
+On Insulin % = DIVIDE ( CALCULATE ( [Encounters], fact_encounter[insulin_flag] = 1 ), [Encounters] )
+HbA1c Tested % = DIVIDE ( CALCULATE ( [Encounters], fact_encounter[a1c_result] <> "Not measured" ), [Encounters] )
+Prior Inpatient % = DIVIDE ( CALCULATE ( [Encounters], fact_encounter[number_inpatient] > 0 ), [Encounters] )
+
+// Readmission among encounters where a drug was prescribed (use with dim_medication[medication] on an axis)
+Drug Encounters = CALCULATE ( COUNTROWS ( fact_encounter_medication ), fact_encounter_medication[is_readmit_eligible] = 1 )
+Drug Readmit 30d % =
+    DIVIDE (
+        CALCULATE ( COUNTROWS ( fact_encounter_medication ), fact_encounter_medication[is_readmit_eligible] = 1,
+                    fact_encounter_medication[readmit_30d_flag] = 1 ),
+        [Drug Encounters]
+    )
+
+// Relative risk vs overall rate (for conditional formatting)
+Readmit 30d vs Overall (pp) = [Readmit 30d %] - CALCULATE ( [Readmit 30d %], ALL ( fact_encounter ) )
