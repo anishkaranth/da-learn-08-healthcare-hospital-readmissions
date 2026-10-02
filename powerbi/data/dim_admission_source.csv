@@ -1,0 +1,26 @@
+admission_source_id,description,admission_source_group
+1,Physician Referral,Referral
+2,Clinic Referral,Referral
+3,HMO Referral,Referral
+4,Transfer from a hospital,Transfer
+5,Transfer from a Skilled Nursing Facility (SNF),Transfer
+6,Transfer from another health care facility,Transfer
+7,Emergency Room,Emergency room
+8,Court/Law Enforcement,Other
+9,Not Available,Unknown
+10,Transfer from critial access hospital,Transfer
+11,Normal Delivery,Other
+12,Premature Delivery,Other
+13,Sick Baby,Other
+14,Extramural Birth,Other
+15,Not Available,Unknown
+17,NULL,Unknown
+18,Transfer From Another Home Health Agency,Transfer
+19,Readmission to Same Home Health Agency,Transfer
+20,Not Mapped,Unknown
+21,Unknown/Invalid,Unknown
+22,Transfer from hospital inpt/same fac reslt in a sep claim,Transfer
+23,Born inside this hospital,Other
+24,Born outside this hospital,Other
+25,Transfer from Ambulatory Surgery Center,Transfer
+26,Transfer from Hospice,Transfer

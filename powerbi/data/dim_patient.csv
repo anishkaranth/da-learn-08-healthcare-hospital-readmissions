@@ -1,0 +1,153 @@
+patient_nbr,race,gender,first_age_group,n_encounters
+78129,Caucasian,Female,60-70,1
+144603,African American,Female,60-70,1
+217233,,Male,60-70,1
+234981,Caucasian,Female,70-80,1
+602028,Caucasian,Female,70-80,1
+1379115,Caucasian,Female,70-80,1
+1827585,African American,Female,80-90,1
+1869606,Caucasian,Male,70-80,1
+2254923,Caucasian,Female,60-70,1
+2259189,Caucasian,Male,60-70,1
+3859335,Caucasian,Male,50-60,1
+3986748,Caucasian,Female,50-60,1
+4021776,Hispanic,Female,50-60,1
+4893768,African American,Female,30-40,1
+5049054,Caucasian,Male,60-70,1
+5207247,Caucasian,Male,70-80,2
+6139287,Caucasian,Male,60-70,1
+7504560,Other,Male,40-50,1
+7609581,Caucasian,Female,30-40,1
+7882524,African American,Male,60-70,1
+8673813,Caucasian,Male,70-80,1
+9482238,Caucasian,Female,80-90,1
+11846358,Asian,Male,60-70,1
+12592350,African American,Female,70-80,1
+17791938,Caucasian,Female,60-70,1
+17848692,Caucasian,Male,80-90,1
+20019024,Caucasian,Male,70-80,1
+20044548,Caucasian,Female,50-60,1
+20889945,Asian,Male,50-60,1
+21422862,Caucasian,Male,80-90,1
+21465657,,Female,50-60,1
+23228883,African American,Female,40-50,1
+23281101,Caucasian,Male,40-50,1
+23344416,Caucasian,Male,60-70,1
+23517369,Caucasian,Male,70-80,1
+23714388,African American,Female,80-90,1
+23828661,African American,Female,30-40,1
+23864598,Caucasian,Male,50-60,1
+23940567,African American,Female,80-90,1
+23942205,Caucasian,Male,50-60,1
+24041340,Caucasian,Female,80-90,1
+24131367,Caucasian,Female,50-60,1
+24137073,African American,Male,30-40,1
+24633099,African American,Female,60-70,1
+24805665,Caucasian,Male,80-90,1
+24822252,Caucasian,Male,60-70,1
+24965487,African American,Female,90-100,1
+25007112,Caucasian,Male,80-90,1
+25045290,African American,Female,50-60,1
+25320996,Caucasian,Male,80-90,1
+25409961,Caucasian,Male,60-70,1
+28024614,Caucasian,Male,80-90,1
+28935648,African American,Male,20-30,1
+30413628,Caucasian,Male,50-60,1
+32740785,African American,Female,40-50,1
+33060267,Caucasian,Male,80-90,1
+34008795,Caucasian,Male,80-90,1
+38029005,,Male,80-90,1
+38367981,,Male,70-80,1
+38449134,Caucasian,Female,70-80,1
+38543625,Caucasian,Female,60-70,1
+38751660,Caucasian,Female,70-80,1
+40357971,Caucasian,Male,70-80,1
+40902264,Caucasian,Male,70-80,1
+41603355,Caucasian,Female,60-70,1
+42140610,Caucasian,Male,70-80,1
+42428106,Caucasian,Female,50-60,1
+42471540,Caucasian,Male,50-60,1
+42839874,African American,Male,50-60,1
+42965991,African American,Female,60-70,1
+43420167,Caucasian,Male,70-80,1
+43467093,Caucasian,Male,40-50,1
+44073234,Caucasian,Female,70-80,1
+44412210,Caucasian,Male,60-70,1
+44430876,Caucasian,Female,70-80,1
+44469414,Caucasian,Female,70-80,1
+44499690,Caucasian,Male,60-70,1
+44858619,African American,Male,50-60,1
+45511560,African American,Male,50-60,1
+46307547,Caucasian,Female,70-80,1
+49811742,African American,Female,50-60,1
+51011154,Caucasian,Female,60-70,1
+53887446,African American,Female,90-100,1
+54690120,Caucasian,Female,70-80,1
+55395837,Caucasian,Male,50-60,1
+56282004,Caucasian,Female,80-90,1
+58735485,African American,Male,40-50,1
+61400889,African American,Female,40-50,1
+62331138,Caucasian,Female,60-70,1
+63419904,Caucasian,Female,70-80,1
+65087892,Caucasian,Female,70-80,1
+66221928,Caucasian,Male,50-60,1
+66257352,Caucasian,Male,60-70,1
+68637672,,Male,60-70,1
+68887458,Caucasian,Male,60-70,1
+69932988,Caucasian,Female,60-70,1
+73188891,Caucasian,Female,60-70,1
+73229094,Caucasian,Female,50-60,1
+74472876,Caucasian,Female,80-90,1
+76100868,African American,Female,50-60,1
+80169489,Caucasian,Female,30-40,1
+80807364,Asian,Male,70-80,1
+84397842,Caucasian,Male,60-70,1
+85047444,Caucasian,Female,80-90,1
+85677246,Caucasian,Male,80-90,1
+85691727,Caucasian,Male,70-80,1
+86205627,Caucasian,Female,50-60,1
+88026903,Hispanic,Female,80-90,1
+88575849,Caucasian,Male,80-90,1
+89096679,Caucasian,Male,80-90,1
+89159958,Caucasian,Male,40-50,1
+89583030,Caucasian,Male,70-80,1
+89834598,Caucasian,Female,80-90,1
+90035649,Caucasian,Male,70-80,1
+90246177,Caucasian,Female,70-80,1
+92184075,Caucasian,Female,70-80,1
+92269341,Caucasian,Female,80-90,1
+92709351,Caucasian,Female,40-50,1
+92771865,Caucasian,Female,80-90,1
+93226005,Caucasian,Female,70-80,1
+96983937,Caucasian,Male,60-70,1
+97391007,Caucasian,Female,40-50,1
+97723566,Caucasian,Female,60-70,1
+97818804,Caucasian,Female,80-90,1
+98597322,Caucasian,Female,70-80,1
+98788392,Caucasian,Female,80-90,1
+99301626,Caucasian,Male,90-100,1
+99750060,Caucasian,Male,80-90,1
+100143639,Caucasian,Female,70-80,1
+101015640,Caucasian,Female,30-40,1
+101125548,Caucasian,Male,40-50,1
+101956869,Caucasian,Female,40-50,1
+102328992,Caucasian,Female,80-90,1
+102894165,Caucasian,Female,70-80,1
+103455648,Caucasian,Female,60-70,1
+103505661,Caucasian,Male,70-80,1
+103637223,Caucasian,Female,50-60,1
+104115780,Caucasian,Female,60-70,1
+104299164,Caucasian,Male,60-70,1
+104971878,African American,Male,50-60,1
+108786150,Caucasian,Male,60-70,1
+109083960,African American,Male,70-80,1
+110735343,Caucasian,Male,60-70,1
+111096729,Caucasian,Female,60-70,1
+112667427,Asian,Female,80-90,1
+113373018,Caucasian,Female,70-80,1
+114145839,African American,Male,50-60,1
+115182801,Caucasian,Female,70-80,1
+141529541,Caucasian,Female,70-80,1
+180334265,Caucasian,Female,60-70,1
+184314542,Caucasian,Male,60-70,1
+184448192,Other,Female,70-80,1

@@ -1,0 +1,24 @@
+medication_key,medication,drug_class
+1,metformin,Biguanide
+2,repaglinide,Meglitinide
+3,nateglinide,Meglitinide
+4,chlorpropamide,Sulfonylurea
+5,glimepiride,Sulfonylurea
+6,acetohexamide,Sulfonylurea
+7,glipizide,Sulfonylurea
+8,glyburide,Sulfonylurea
+9,tolbutamide,Sulfonylurea
+10,pioglitazone,Thiazolidinedione
+11,rosiglitazone,Thiazolidinedione
+12,acarbose,Alpha-glucosidase inhibitor
+13,miglitol,Alpha-glucosidase inhibitor
+14,troglitazone,Thiazolidinedione
+15,tolazamide,Sulfonylurea
+16,examide,Other (examide)
+17,citoglipton,Other (citoglipton)
+18,insulin,Insulin
+19,glyburide_metformin,Combination
+20,glipizide_metformin,Combination
+21,glimepiride_pioglitazone,Combination
+22,metformin_rosiglitazone,Combination
+23,metformin_pioglitazone,Combination

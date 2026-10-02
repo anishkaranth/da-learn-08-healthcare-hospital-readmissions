@@ -1,0 +1,31 @@
+discharge_disposition_id,description,discharge_group,is_readmit_eligible
+1,Discharged to home,Home,1
+2,Discharged/transferred to another short term hospital,Other hospital / institution,1
+3,Discharged/transferred to SNF,Skilled nursing / rehab / long-term care,1
+4,Discharged/transferred to ICF,Skilled nursing / rehab / long-term care,1
+5,Discharged/transferred to another type of inpatient care institution,Other hospital / institution,1
+6,Discharged/transferred to home with home health service,Home with health service,1
+7,Left AMA,Left AMA,1
+8,Discharged/transferred to home under care of Home IV provider,Home with health service,1
+9,Admitted as an inpatient to this hospital,Other hospital / institution,1
+10,Neonate discharged to another hospital for neonatal aftercare,Other hospital / institution,1
+11,Expired,Expired,0
+12,Still patient or expected to return for outpatient services,Other hospital / institution,1
+13,Hospice / home,Hospice,0
+14,Hospice / medical facility,Hospice,0
+15,Discharged/transferred within this institution to Medicare approved swing bed,Skilled nursing / rehab / long-term care,1
+16,Discharged/transferred/referred another institution for outpatient services,Other hospital / institution,1
+17,Discharged/transferred/referred to this institution for outpatient services,Other hospital / institution,1
+18,NULL,Unknown,1
+19,"Expired at home. Medicaid only, hospice.",Expired,0
+20,"Expired in a medical facility. Medicaid only, hospice.",Expired,0
+21,"Expired, place unknown. Medicaid only, hospice.",Expired,0
+22,Discharged/transferred to another rehab fac including rehab units of a hospital .,Skilled nursing / rehab / long-term care,1
+23,Discharged/transferred to a long term care hospital.,Skilled nursing / rehab / long-term care,1
+24,Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare.,Skilled nursing / rehab / long-term care,1
+25,Not Mapped,Unknown,1
+26,Unknown/Invalid,Unknown,1
+27,Discharged/transferred to a federal health care facility.,Skilled nursing / rehab / long-term care,1
+28,Discharged/transferred/referred to a psychiatric hospital of psychiatric distinct part unit of a hospital,Other hospital / institution,1
+29,Discharged/transferred to a Critical Access Hospital (CAH).,Other hospital / institution,1
+30,Discharged/transferred to another Type of Health Care Institution not Defined Elsewhere,Skilled nursing / rehab / long-term care,1
