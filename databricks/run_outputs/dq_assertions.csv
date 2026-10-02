@@ -1,0 +1,13 @@
+check_name,failed_rows,status
+fact_encounter rows = cln_encounters rows,0,PASS
+fact_encounter.admission_source_id -> dim_admission_source,0,PASS
+fact_encounter.admission_type_id -> dim_admission_type,0,PASS
+fact_encounter.discharge_disposition_id -> dim_discharge_disposition,0,PASS
+fact_encounter.encounter_id unique,0,PASS
+fact_encounter.patient_nbr -> dim_patient,0,PASS
+fact_encounter_medication.medication_key -> dim_medication,0,PASS
+non-negative visit / medication counts,0,PASS
+readmit_30d_flag <= readmit_any_flag,0,PASS
+"readmitted in {<30, >30, NO}",0,PASS
+seeded lookup rows exist verbatim in IDS_mapping.csv,0,PASS
+time_in_hospital between 1 and 14,0,PASS

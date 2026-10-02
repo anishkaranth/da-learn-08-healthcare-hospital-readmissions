@@ -1,0 +1,11 @@
+medication,drug_class,encounters_prescribed,encounters_dose_changed,readmits_30d,readmit_30d_pct
+glimepiride,Sulfonylurea,5122,513,530,10.35
+glipizide,Sulfonylurea,12530,1312,1446,11.54
+glyburide,Sulfonylurea,10523,1361,1128,10.72
+glyburide_metformin,Combination,698,14,78,11.17
+insulin,Insulin,52964,22895,6578,12.42
+metformin,Biguanide,19843,1637,1938,9.77
+nateglinide,Meglitinide,689,35,80,11.61
+pioglitazone,Thiazolidinedione,7254,347,772,10.64
+repaglinide,Meglitinide,1518,150,205,13.5
+rosiglitazone,Thiazolidinedione,6303,256,664,10.53

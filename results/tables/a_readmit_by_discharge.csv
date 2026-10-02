@@ -1,0 +1,9 @@
+discharge_group,encounters,readmits_30d,readmit_30d_pct
+Expired,1652,0,0.0
+Home,60232,5602,9.3
+Home with health service,13010,1653,12.71
+Hospice,771,43,5.58
+Left AMA,623,90,14.45
+Other hospital / institution,3506,651,18.57
+Skilled nursing / rehab / long-term care,17289,2767,16.0
+Unknown,4680,551,11.77

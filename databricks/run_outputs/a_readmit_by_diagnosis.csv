@@ -1,0 +1,11 @@
+primary_diagnosis_group,encounters,share_pct,readmits_30d,readmit_30d_pct,readmit_any_pct,avg_los_days
+Circulatory,29680,29.88,3469,11.69,48.16,4.21
+Diabetes,8661,8.72,1135,13.1,51.39,4.33
+Digestive,9333,9.40,1010,10.82,46.83,4.36
+Genitourinary,5002,5.04,552,11.04,45.3,4.22
+Injury,6851,6.90,850,12.41,45.0,4.62
+Missing,20,0.02,5,25.0,45.0,3.75
+Musculoskeletal,4935,4.97,471,9.54,39.33,3.91
+Neoplasms,3131,3.15,341,10.89,36.28,5.28
+Other,17793,17.91,2079,11.68,46.86,4.77
+Respiratory,13934,14.03,1402,10.06,49.72,4.19

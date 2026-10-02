@@ -1,0 +1,7 @@
+admission_type,encounters,readmit_30d_pct
+Elective,18667,10.49
+Emergency,52369,11.83
+Newborn,10,10.0
+Trauma Center,18,0.0
+Unknown,10144,10.87
+Urgent,18132,11.35

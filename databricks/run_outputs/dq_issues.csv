@@ -1,0 +1,11 @@
+check_name,affected_rows
+encounters: diag_1 is a V/E supplementary code,1645
+encounters: discharge id not in IDS_mapping,0
+encounters: duplicate encounter_id (extras dropped),0
+encounters: expired / hospice discharge (excluded from readmission rates),2423
+encounters: gender Unknown/Invalid (dropped),3
+"encounters: num_lab_procedures outlier (> Q3 + 3*IQR, kept)",0
+"encounters: num_medications outlier (> Q3 + 3*IQR, kept)",430
+encounters: patients with > 1 encounter,16773
+encounters: repeat encounters of the same patient,30248
+encounters: rows dropped in cleaning,3

@@ -1,0 +1,2 @@
+encounters_total,patients_total,eligible_encounters,readmits_30d,readmit_30d_pct,readmit_any_pct,readmit_30d_pct_all_encounters,readmit_30d_pct_first_encounter,avg_los_days,avg_num_medications,avg_num_lab_procedures,med_change_pct,on_diabetes_med_pct,on_insulin_pct,a1c_tested_pct,prior_inpatient_pct
+101763,71515,99340,11314,11.39,47.13,11.16,8.97,4.4,16.02,43.1,46.19,77.00,53.44,16.72,33.54

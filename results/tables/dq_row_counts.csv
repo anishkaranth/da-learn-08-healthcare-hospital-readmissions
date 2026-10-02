@@ -1,0 +1,12 @@
+entity,raw_rows,distinct_keys,clean_rows,grain
+dim_admission_source,,,25,admission_source_id
+dim_admission_type,,,8,admission_type_id
+dim_age_group,,,10,age decade
+dim_diagnosis_group,,,10,ICD-9 group
+dim_discharge_disposition,,,30,discharge_disposition_id
+dim_medication,,,23,drug
+dim_patient,,,71515,patient_nbr
+encounter_medications,,,120050,encounter x prescribed drug
+encounters,101766,101766,101763,encounter_id
+fact_encounter,,,101763,encounter
+fact_encounter_medication,,,120050,encounter x drug

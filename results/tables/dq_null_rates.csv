@@ -1,0 +1,7 @@
+entity,column_name,raw_missing_pct,clean_null_pct,treatment
+encounters,A1Cresult,83.28,83.28,'None' means test not done -> category Not measured
+encounters,diag_1,0.02,0.02,NULL -> diagnosis group Missing
+encounters,medical_specialty,49.08,49.08,kept as NULL
+encounters,payer_code,39.56,39.56,kept as NULL
+encounters,race,2.23,2.23,kept as NULL
+encounters,weight,96.86,96.86,kept as NULL (97% missing - not used for analysis)
